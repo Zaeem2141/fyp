@@ -20,6 +20,11 @@ app.use(express.json());
 // use cors
 
 app.use(cors(
+  {
+    origin: ["Https://deploy-backend.vercel.app"],
+    methods: ["POST" , "GET"],
+    credentials:true
+  }
 ));
 
 //Users route
