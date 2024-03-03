@@ -39,6 +39,11 @@ app.use(notFound);
 // error handlers
 app.use(errorHandler);
 
+app.get('/',(req,res)=>{
+res.send('Deployed')
+})
+    
+
 //server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Server is running on ${PORT}`));
